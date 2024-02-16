@@ -1,8 +1,10 @@
 package ru.gb.service;
 
 
+import io.micrometer.core.instrument.MeterRegistry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.gb.dto.ProductRequest;
 import ru.gb.dto.ProductResponse;
@@ -17,6 +19,9 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class ProductServiceImpl implements ProductService {
+
+    @Autowired
+    private MeterRegistry meterRegistry;
 
     private final ProductRepository productRepository;
 
@@ -37,6 +42,9 @@ public class ProductServiceImpl implements ProductService {
     public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepository.findAll().stream().sorted(Comparator.comparing(Product::getName)).toList();
         log.info("Get all products command");
+
+        // Увеличиваем счетчик на единицу
+        meterRegistry.counter("getall.products.counter").increment();
         return products.stream().map(this::mapToProductResponse).toList();
     }
 
