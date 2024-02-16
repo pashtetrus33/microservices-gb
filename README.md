@@ -13,6 +13,13 @@
 3. Создайте файл конфигурации Prometheus (`prometheus.yml`), в котором определите конфигурацию для сбора метрик из вашего микросервиса.
 Настройте интервал сбора и выберите метрики, которые вы хотите собирать.
 
+![1](https://github.com/pashtetrus33/microservices-gb/assets/86385554/ac2e2c3f-97db-4c38-b0d2-52039c998e07)
+![2](https://github.com/pashtetrus33/microservices-gb/assets/86385554/ad46352a-3f7c-457a-8d00-3d46e2b6fd73)
+![3](https://github.com/pashtetrus33/microservices-gb/assets/86385554/7ef629aa-2750-423e-85fe-92ee7b6c336b)
+![4](https://github.com/pashtetrus33/microservices-gb/assets/86385554/7311649b-508a-48cd-b9d2-9f6e9f4113f5)
+![5](https://github.com/pashtetrus33/microservices-gb/assets/86385554/66b18be5-a1e2-46cb-ad88-a0b60c7d3fba)
+
+
 
 ## Урок 9. Spring Cloud. Микросервисная архитектура.
 
